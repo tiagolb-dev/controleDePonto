@@ -8,13 +8,55 @@ group = 'br.com.dio'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.3'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.5.3'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.5.3'
+    implementation 'org.projectlombok:lombok:1.18.18'
+
+
+    compileOnly group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.13.0-rc1'
+
+
+	runtimeOnly group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
+
+
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+
+	implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+
+
+
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	implementation group: 'io.springfox', name: 'springfox-bean-validators', version: '2.9.2'
+
+
+	implementation group: 'org.hibernate', name: 'hibernate-envers', version: '5.5.4.Final'
+	implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '7.0.1.Final'
+
+
+
+	testImplementation(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.5.3') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
 }
 
 test {

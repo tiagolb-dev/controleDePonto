@@ -9,3 +9,5 @@ Uma API Rest destinada a controlar o ponto e acesso dos usuários de uma empresa
 * Hibernate Envers
 * Lombok
 * Swagger
+
+![foto da api documentação com swagger](https://github.com/tiagolb-dev/controleDePonto/blob/main/swagger-pontodeacesso.jpg)

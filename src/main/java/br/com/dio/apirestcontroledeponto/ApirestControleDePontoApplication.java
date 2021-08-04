@@ -11,3 +11,11 @@ public class ApirestControleDePontoApplication {
 	}
 
 }
+/**
+ * SWAGGER
+ http://localhost:8081/swagger-ui.html#/jornada-trabalho-controller
+
+ *Banco de dados
+ http://localhost:8081/h2
+ */
+
